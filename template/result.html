@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            margin-top: 20px;
+            border: 3px solid #444;
+            width: 300px;
+            height: auto;
+        }
+        h2 {
+            color: #0066cc;
+        }
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+    <h2>Predicted Class: {{ class_label }}</h2>
+    <img src="data:image/png;base64,{{ img_data }}" alt="Uploaded Image">
+    <br>
+    <a href="{{ url_for('upload_file') }}">Try Another Image</a>
+</body>
+</html>
